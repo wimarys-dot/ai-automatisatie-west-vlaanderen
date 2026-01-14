@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-AUTOMATISATIE.BE | n8n Expert West-Vlaanderen</title>
+    <meta name="description" content="Dé n8n expert en AI specialist in West-Vlaanderen. Krachtige automatisaties met de esthetiek van n8n.io.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { 
+          font-family: 'Plus Jakarta Sans', sans-serif; 
+          background-color: #09090b;
+          color: #fafafa;
+          -webkit-font-smoothing: antialiased;
+          overflow-x: hidden;
+        }
+
+        /* n8n.io Canvas Dot Grid */
+        .bg-canvas {
+          background-image: radial-gradient(#27272a 1px, transparent 1px);
+          background-size: 24px 24px;
+        }
+
+        .glass { 
+          background: rgba(18, 18, 23, 0.7); 
+          backdrop-filter: blur(12px); 
+          border: 1px solid rgba(255, 255, 255, 0.08); 
+        }
+
+        /* Workflow Connection Line Animation */
+        .workflow-line {
+          position: absolute;
+          background: linear-gradient(90deg, transparent, #ff6d5a, transparent);
+          height: 1px;
+          width: 100%;
+          opacity: 0.3;
+          animation: flow 4s linear infinite;
+        }
+
+        @keyframes flow {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+
+        .animate-fade-in {
+          animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Node Sockets */
+        .node-socket {
+          width: 8px;
+          height: 8px;
+          background: #3f3f46;
+          border: 1px solid #52525b;
+          border-radius: 50%;
+          position: absolute;
+        }
+
+        ::selection {
+          background-color: #ff6d5a;
+          color: white;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-canvas">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "AI Automatisatie West-Vlaanderen",
+  "description": "Een professionele website voor ai-automatisatie.be gericht op West-Vlaamse KMO's, gespecialiseerd in n8n, AI Agents en MCP implementaties.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
