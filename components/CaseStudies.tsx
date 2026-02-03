@@ -34,7 +34,7 @@ const CaseStudies: React.FC = () => {
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-[#ff6d5a] transition-colors">{c.title}</h3>
               <p className="text-zinc-400 mb-8 flex-1 text-sm md:text-base">{c.desc}</p>
               <div className="pt-6 border-t border-white/5 flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Resultaat</span>
+                <span className="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Resultaat</span>
                 <span className="text-base md:text-lg font-bold text-white">{c.stat}</span>
               </div>
             </div>

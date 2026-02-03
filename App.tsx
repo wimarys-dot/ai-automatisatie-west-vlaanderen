@@ -6,7 +6,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import StrategyTool from './components/StrategyTool';
+import AuditTool from './components/AuditTool';
 import LocalSEO from './components/LocalSEO';
 import CaseStudies from './components/CaseStudies';
 import Footer from './components/Footer';
@@ -65,7 +65,7 @@ const HomePage: React.FC = () => (
   <>
     <Hero />
     <Services />
-    <StrategyTool />
+    <AuditTool />
     <CaseStudies />
     <LocalSEO />
   </>

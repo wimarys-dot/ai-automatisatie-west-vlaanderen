@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang=\\ Comparison</title>
+    <link href=\400;600;700&display=swap\amily=Material+Icons\      padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .poster-container {
+            width: 720px;
+            min-height: 960px;
+            background-color: #121212;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .title {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0;
+        }
+        
+        .logo-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            width: 180px;
+            height: 180px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .logo-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .n8n-logo {
+            background-color: rgba(255, 109, 90, 0.15);
+            border: 2px solid #ff6d5a;
+        }
+        
+        .zapier-logo {
+            background-color: rgba(255, 79, 0, 0.15);
+            border: 2px solid #FF4F00;
+        }
+        
+        .vs {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0 30px;
+            color: #ffffff;
+        }
+        
+        .logo-image {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+        
+        .logo-name {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .comparison-table {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .table-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .comparison-row {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .criterion {
+            flex: 1;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .n8n-value, .zapier-value {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .n8n-value {
+            color: #ff6d5a;
+        }
+        
+        .zapier-value {
+            color: #FF4F00;
+        }
+        
+        .winner-badge {
+            margin-left: 10px;
+            font-size: 14px;
+            padding: 3px 8px;
+            border-radius: 10px;
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+        }
+        
+        .icon {
+            margin-right: 8px;
+        }
+        
+        .best-for-section {
+            display: flex;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+        
+        .best-for-card {
+            flex: 1;
+            padding: 25px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .n8n-card {
+            background-color: rgba(255, 109, 90, 0.15);
+            border: 2px solid #ff6d5a;
+        }
+        
+        .zapier-card {
+            background-color: rgba(255, 79, 0, 0.15);
+            border: 2px solid #FF4F00;
+        }
+        
+        .card-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-list {
+            list-style-type: none;
+        }
+        
+        .card-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .card-list li i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .verdict {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-top: auto;
+        }
+        
+        .verdict-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .verdict-text {
+            font-size: 22px;
+            line-height: 1.5;
+        }
+        
+        .highlight-n8n {
+            color: #ff6d5a;
+            font-weight: 600;
+        }
+        
+        .highlight-zapier {
+            color: #FF4F00;
+            font-weight: 600;
+        }
+        
+        .comparison-bar {
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin-top: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .n8n-bar, .zapier-bar {
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+        
+        .n8n-bar {
+            background-color: #ff6d5a;
+            left: 0;
+        }
+        
+        .zapier-bar {
+            background-color: #FF4F00;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class=\ss=
+tainer\-image\d5a;\yle=\>
+                <div class=\\>bolt</i>
+                    </div>
+                    <div class=\FF4F00;\omparison Table Section -->
+        <div class=\-title\        <div class=\          <i class=\                  <span class=\  <div class=\>
+                    Starts $20/mo
+                </div>
+            </div>
+            
+            <div class=\                <div class=
+sion</i>
+                    500+
+                </div>
+                <div class=\ue\                </div>
+            </div>
+            
+            <div class=\
+                <div class=\e\
+                    <span class=\      <div class=\                    NO
+                </div>
+            </div>
+            
+            <div class=\      <div class=\                HIGH
+                    <span class=\  </div>
+                <div class=\s icon\        
+            <div class=\ing curve</div>
+                <div class=\icons icon\iv class=\                    EASY
+                    <span class=\      </div>
+            </div>
+            
+            <div class=\        <div class=\>
+                    <i class=\          </div>
+                <div class=\ial-icons icon\        </div>
+
+        <!-- Best For Section -->
+        <div class=\      <div class=\: #ff6d5a;\>
+                    n8n is best for:
+                </h3>
+                <ul class=\t\ Technical teams</li>
+                    <li><i class=\>check_circle</i> Developers</li>
+                    <li><i class=\: #ff6d5a;\ass=\                  <li><i class=\ workflows</li>
+                </ul>
+            </div>
+            
+            <div class=\est-for-card zapier-card\                  <i class=\      Zapier is best for:
+                </h3>
+                <ul class=\            <li><i class=\ users</li>
+                    <li><i class=\cle</i> Quick setup needs</li>
+                    <li><i class=\FF4F00;\\s=\            </ul>
+            </div>
+        </div>
+
+        <!-- Verdict Section -->
+        <div class=\verdict-text\<br>
+                Choose <span class=\    </p>
+        </div>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang=\\ Comparison</title>
+    <link href=\400;600;700&display=swap\amily=Material+Icons\      padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .poster-container {
+            width: 720px;
+            min-height: 960px;
+            background-color: #121212;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, #ff6d5a, #FF4F00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .logo-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .logo-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .n8n-logo {
+            background-color: rgba(255, 109, 90, 0.15);
+            border: 2px solid #ff6d5a;
+        }
+        
+        .zapier-logo {
+            background-color: rgba(255, 79, 0, 0.15);
+            border: 2px solid #FF4F00;
+        }
+        
+        .vs {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 20px;
+            color: #ffffff;
+        }
+        
+        .logo-image {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-name {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .comparison-table {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .table-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .comparison-row {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .criterion {
+            flex: 1;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .n8n-value, .zapier-value {
+            flex: 1.2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .n8n-value {
+            color: #ff6d5a;
+        }
+        
+        .zapier-value {
+            color: #FF4F00;
+        }
+        
+        .winner-badge {
+            margin-left: 10px;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+            font-weight: 600;
+        }
+        
+        .icon {
+            margin-right: 8px;
+        }
+        
+        .best-for-section {
+            display: flex;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+        
+        .best-for-card {
+            flex: 1;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .n8n-card {
+            background-color: rgba(255, 109, 90, 0.15);
+            border: 2px solid #ff6d5a;
+        }
+        
+        .zapier-card {
+            background-color: rgba(255, 79, 0, 0.15);
+            border: 2px solid #FF4F00;
+        }
+        
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-list {
+            list-style-type: none;
+        }
+        
+        .card-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 16px;
+        }
+        
+        .card-list li i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        
+        .verdict {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin-top: auto;
+        }
+        
+        .verdict-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .verdict-text {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        
+        .highlight-n8n {
+            color: #ff6d5a;
+            font-weight: 600;
+        }
+        
+        .highlight-zapier {
+            color: #FF4F00;
+            font-weight: 600;
+        }
+        
+        .comparison-bar {
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            margin-top: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .n8n-bar, .zapier-bar {
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+        
+        .n8n-bar {
+            background-color: #ff6d5a;
+            left: 0;
+        }
+        
+        .zapier-bar {
+            background-color: #FF4F00;
+            right: 0;
+        }
+        
+        .checkmark {
+            color: #4CAF50;
+        }
+        
+        .xmark {
+            color: #F44336;
+        }
+    </style>
+</head>
+<body>
+    <div class=\er\>
+                <div class=\
+                        <i class=\ount_tree</i>
+                    </div>
+                    <div class=\r: #ff6d5a;\        <div class=\                  <i class=\                  </div>
+                    <div class=\ier</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table Section -->
+        <div class=\ure Comparison</h2>
+            
+            <div class=\lass=\lass=\              <span class=\iv class=\                  Starts $20/mo
+                </div>
+            </div>
+            
+            <div class=\          <div class=\>
+                    500+
+                </div>
+                <div class=\                  <i class=\        </div>
+            </div>
+            
+            <div class=\          <div class=\                  <i class=\ES
+                    <span class=\        <div class=\cel</i>
+                    NO
+                </div>
+            </div>
+            
+            <div class=\              <div class=\k
+>
+                </div>
+                <div class=\ss=\      </div>
+            
+            <div class=\criterion\lass=\              <div class=\mark\>WINNER</span>
+                </div>
+            </div>
+            
+            <div class=\omparison-row\  <div class=\</i>
+                    YES
+                </div>
+                <div class=\                    <i class=\
+                </div>
+            </div>
+        </div>
+
+        <!-- Best For Section -->
+        <div class=\        <h3 class=\-icons\  </h3>
+                <ul class=\\=\<li><i class=\                    <li><i class=\rivacy</li>
+                    <li><i class=\cle</i> Complex workflows</li>
+                </ul>
+            </div>
+            
+            <div class=\FF4F00;\                    Zapier is best for:
+                </h3>
+                <ul class=\t\ Non-technical users</li>
+                    <li><i class=\0;\color: #FF4F00;\al-icons\><i class=\          </ul>
+            </div>
+        </div>
+
+        <!-- Verdict Section -->
+        <div class=\erdict-text\r>
+                Choose <span class=\  </p>
+        </div>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang=\\ Comparison</title>
+    <link href=\400;600;700&display=swap\amily=Material+Icons\      padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .poster-container {
+            width: 720px;
+            min-height: 960px;
+            background-color: #121212;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, #ff6d5a, #FF4F00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .logo-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .logo-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .n8n-logo {
+            background-color: rgba(255, 109, 90, 0.15);
+            border: 2px solid #ff6d5a;
+        }
+        
+        .zapier-logo {
+            background-color: rgba(255, 79, 0, 0.15);
+            border: 2px solid #FF4F00;
+        }
+        
+        .vs {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 20px;
+            color: #ffffff;
+        }
+        
+        .logo-image {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-name {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .comparison-table {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .table-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .comparison-row {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .criterion {
+            flex: 1;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .n8n-value, .zapier-value {
+            flex: 1.2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        
+        .n8n-value {
+            color: #ff6d5a;
+        }
+        
+        .zapier-value {
+            color: #FF4F00;
+        }
+        
+        .winner-badge {
+            margin-left: 10px;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+            font-weight: 600;
+        }
+        
+        .icon {
+            margin-right: 8px;
+        }
+        
+        .best-for-section {
+            display: flex;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+        
+        .best-for-card {
+            flex: 1;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .n8n-card {
+            background-color: rgba(255, 109, 90, 0.15);
+            border: 2px solid #ff6d5a;
+        }
+        
+        .zapier-card {
+            background-color: rgba(255, 79, 0, 0.15);
+            border: 2px solid #FF4F00;
+        }
+        
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-list {
+            list-style-type: none;
+        }
+        
+        .card-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 16px;
+        }
+        
+        .card-list li i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        
+        .verdict {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin-top: auto;
+        }
+        
+        .verdict-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .verdict-text {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        
+        .highlight-n8n {
+            color: #ff6d5a;
+            font-weight: 600;
+        }
+        
+        .highlight-zapier {
+            color: #FF4F00;
+            font-weight: 600;
+        }
+        
+        .checkmark {
+            color: #4CAF50;
+        }
+        
+        .xmark {
+            color: #F44336;
+        }
+    </style>
+</head>
+<body>
+    <div class=\er\>
+                <div class=\
+                        <i class=\ount_tree</i>
+                    </div>
+                    <div class=\r: #ff6d5a;\        <div class=\                  <i class=\                  </div>
+                    <div class=\ier</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table Section -->
+        <div class=\ure Comparison</h2>
+            
+            <div class=\lass=\lass=\              <span class=\iv class=\                  Starts $20/mo
+                </div>
+            </div>
+            
+            <div class=\          <div class=\>
+                    500+
+                </div>
+                <div class=\                  <i class=\        </div>
+            </div>
+            
+            <div class=\          <div class=\                  <i class=\ES
+                    <span class=\        <div class=\cel</i>
+                    NO
+                </div>
+            </div>
+            
+            <div class=\              <div class=\k
+>
+                </div>
+                <div class=\ss=\      </div>
+            
+            <div class=\criterion\lass=\              <div class=\mark\>WINNER</span>
+                </div>
+            </div>
+            
+            <div class=\omparison-row\  <div class=\</i>
+                    YES
+                </div>
+                <div class=\                    <i class=\
+                </div>
+            </div>
+        </div>
+
+        <!-- Best For Section -->
+        <div class=\        <h3 class=\-icons\  </h3>
+                <ul class=\\=\<li><i class=\                    <li><i class=\rivacy</li>
+                    <li><i class=\cle</i> Complex workflows</li>
+                </ul>
+            </div>
+            
+            <div class=\FF4F00;\                    Zapier is best for:
+                </h3>
+                <ul class=\t\ Non-technical users</li>
+                    <li><i class=\0;\color: #FF4F00;\al-icons\><i class=\          </ul>
+            </div>
+        </div>
+
+        <!-- Verdict Section -->
+        <div class=\erdict-text\r>
+                Choose <span class=\  </p>
+        </div>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang=\\ Comparison</title>
+    <link href=\400;600;700&display=swap\amily=Material+Icons\      padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #121212;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .title {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, #ff6d5a, #FF4F00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .logo-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            width: 180px;
+            height: 180px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .logo-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .n8n-logo {
+            background-color: rgba(255, 109, 90, 0.15);
+            border: 2px solid #ff6d5a;
+        }
+        
+        .zapier-logo {
+            background-color: rgba(255, 79, 0, 0.15);
+            border: 2px solid #FF4F00;
+        }
+        
+        .vs {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0 20px;
+            color: #ffffff;
+        }
+        
+        .logo-image {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-name {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            flex-grow: 1;
+            gap: 30px;
+        }
+        
+        .left-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .comparison-table {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+        }
+        
+        .table-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .comparison-row {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+        
+        .criterion {
+            flex: 1;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .n8n-value, .zapier-value {
+            flex: 1.2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .n8n-value {
+            color: #ff6d5a;
+        }
+        
+        .zapier-value {
+            color: #FF4F00;
+        }
+        
+        .winner-badge {
+            margin-left: 10px;
+            font-size: 14px;
+            padding: 3px 8px;
+            border-radius: 10px;
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+            font-weight: 600;
+        }
+        
+        .icon {
+            margin-right: 8px;
+            font-size: 22px;
+        }
+        
+        .best-for-section {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .best-for-cards {
+            display: flex;
+            gap: 20px;
+            flex-grow: 1;
+        }
+        
+        .best-for-card {
+            flex: 1;
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .n8n-card {
+            background-color: rgba(255, 109, 90, 0.15);
+            border: 2px solid #ff6d5a;
+        }
+        
+        .zapier-card {
+            background-color: rgba(255, 79, 0, 0.15);
+            border: 2px solid #FF4F00;
+        }
+        
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-list {
+            list-style-type: none;
+        }
+        
+        .card-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 18px;
+        }
+        
+        .card-list li i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        
+        .verdict {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .verdict-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .verdict-text {
+            font-size: 24px;
+            line-height: 1.5;
+        }
+        
+        .highlight-n8n {
+            color: #ff6d5a;
+            font-weight: 600;
+        }
+        
+        .highlight-zapier {
+            color: #FF4F00;
+            font-weight: 600;
+        }
+        
+        .checkmark {
+            color: #4CAF50;
+        }
+        
+        .xmark {
+            color: #F44336;
+        }
+    </style>
+</head>
+<body>
+    <div class=\r\
+                <div class=\                        <i class=
+t_tree</i>
+                    </div>
+                    <div class=\ #ff6d5a;\      <div class=\                <i class=\                </div>
+                    <div class=\r</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class=\s=\on-table\    
+                    <div class=\rion\<i class=\ free
+                            <span class=\  </div>
+                        <div class=\=\          </div>
+                    </div>
+                    
+                    <div class=\comparison-row\            <div class=\extension</i>
+                            500+
+                        </div>
+                        <div class=\sion</i>
+                            500+
+                        </div>
+                    </div>
+                    
+                    <div class=\  <div class=\                          <i class=\              YES
+                            <span class=\              </div>
+                        <div class=\    <i class=\          </div>
+                    </div>
+                    
+                    <div class=\comparison-row\                <div class=
+ checkmark\winner-badge\apier-value\                  LIMITED
+                        </div>
+                    </div>
+                    
+                    <div class=\terion\          <i class=\                    </div>
+                        <div class=\          <i class=\EASY
+                            <span class=\  </div>
+                    </div>
+                    
+                    <div class=\son-row\            <div class=\eckmark\            <div class=\ checkmark\            </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class=\              <div class=\ For</h2>
+                    <div class=\best-for-card n8n-card\5a;\rs</i>
+                                n8n is best for:
+                            </h3>
+                            <ul class=\l-icons\      <li><i class=\                              <li><i class=\</i> Full control needs</li>
+                                <li><i class=\\=\              </ul>
+                        </div>
+                        
+                        <div class=\yle=\-right: 8px;\      </h3>
+                            <ul class=\i><i class=\                              <li><i class=\</i> Quick setup</li>
+                                <li><i class=\: #FF4F00;\material-icons\              <li><i class=\ut IT</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Verdict Section -->
+                <div class=\          <p class=\8n</span> for control & cost,<br>
+                        Choose <span class=\apier</span> for simplicity
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

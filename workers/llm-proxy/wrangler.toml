@@ -1,0 +1,10 @@
+name = "llm-proxy"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# Allowed origins for CORS (add your domains)
+[vars]
+ALLOWED_ORIGINS = "https://ai-automatisatie.be,https://ai-automatisatie.pages.dev,http://localhost:5173"
+
+# The API key will be added as a secret via:
+# wrangler secret put FEATHERLESS_API_KEY

@@ -30,11 +30,11 @@ const LocalSEO: React.FC = () => {
           <div className="bg-[#18181b] border border-white/10 p-10 rounded-[2.5rem] text-center relative overflow-hidden">
             <div className="node-socket -top-1 left-1/2 -translate-x-1/2"></div>
             <h3 className="text-2xl font-bold text-white mb-4">Live Demo</h3>
-            <p className="text-zinc-500 mb-8">Ontdek hoe onze n8n modules uw bedrijf transformeren in een kort gesprek.</p>
+            <p className="text-zinc-400 mb-8">Ontdek hoe onze n8n modules uw bedrijf transformeren in een kort gesprek.</p>
             <button className="w-full bg-[#ff6d5a] hover:bg-[#ff8575] text-white font-bold py-4 px-10 rounded-full transition-all shadow-lg shadow-[#ff6d5a]/20 hover:scale-105">
               Boek Demo Gesprek
             </button>
-            <p className="mt-6 text-sm text-zinc-500">Of ga naar onze expert-site: <a href="#" className="text-[#ff6d5a] font-bold hover:underline">n8n-expert.be</a></p>
+            <p className="mt-6 text-sm text-zinc-400">Of ga naar onze expert-site: <a href="#" className="text-[#ff6d5a] font-bold hover:underline">n8n-expert.be</a></p>
           </div>
         </div>
       </div>
