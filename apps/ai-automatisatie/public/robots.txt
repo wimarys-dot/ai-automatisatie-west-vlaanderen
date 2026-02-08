@@ -1,0 +1,6 @@
+# https://ai-automatisatie.be robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://ai-automatisatie.be/sitemap.xml

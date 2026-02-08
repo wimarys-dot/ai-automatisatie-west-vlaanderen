@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang=\\t</title>
+    <link href=\0&display=swap\rial+Icons\ing: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .poster-container {
+            width: 720px;
+            min-height: 960px;
+            background-color: #121212;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            background-color: #EA4B71;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-text {
+            color: white;
+            font-weight: 700;
+            font-size: 28px;
+        }
+        .title {
+            font-size: 60px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 24px;
+            color: #cccccc;
+        }
+        .section {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #ff6d5a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title .material-icons {
+            margin-right: 10px;
+        }
+        .nodes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .node-card {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #7c3aed;
+        }
+        .node-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .node-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .node-icon .material-icons {
+            color: #ff6d5a;
+            font-size: 28px;
+        }
+        .node-info h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .node-info p {
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .shortcuts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .shortcut {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 15px;
+            flex: 1;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-left: 4px solid #ff6d5a;
+        }
+        .shortcut-key {
+            background-color: #2a2a2a;
+            color: #ff6d5a;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .shortcut-desc {
+            font-size: 16px;
+            color: #cccccc;
+            text-align: center;
+        }
+        .workflow-pattern {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .workflow-steps {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .workflow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 30%;
+        }
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .step-icon .material-icons {
+            color: #7c3aed;
+            font-size: 30px;
+        }
+        .step-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .step-desc {
+            font-size: 14px;
+            color: #cccccc;
+        }
+        .arrow {
+            display: flex;
+            align-items: center;
+            color: #7c3aed;
+            font-size: 30px;
+        }
+        .best-practices {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 25px;
+        }
+        .practice-list {
+            list-style: none;
+        }
+        .practice-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .practice-item .material-icons {
+            color: #7c3aed;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .practice-text {
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .bg-accent {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 109, 90, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            z-index: 1;
+        }
+        .bg-accent-1 {
+            top: -100px;
+            right: -100px;
+        }
+        .bg-accent-2 {
+            bottom: -50px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class=\ent bg-accent-1\- Header Section -->
+        <header class=\      <span class=\1 class=\ide</p>
+            </div>
+        </header>
+        
+        <!-- Essential Nodes Section -->
+        <section class=\ass=\  <div class=\ass=\  </div>
+                    <div class=\3>
+                        <p>Connect to any API endpoint</p>
+                    </div>
+                </div>
+                <div class=
+\                  <div class=\          <p>Receive data from external services</p>
+                    </div>
+                </div>
+                <div class=\                  <i class=\    <div class=\fy or add data fields</p>
+                    </div>
+                </div>
+                <div class=\=\e-info\ow branches</p>
+                    </div>
+                </div>
+                <div class=\de-card\al-icons\                    <h3>Code</h3>
+                        <p>Execute custom JavaScript logic</p>
+                    </div>
+                </div>
+                <div class=\            <div class=\>
+                    </div>
+                    <div class=\  <h3>Schedule Trigger</h3>
+                        <p>Run workflows on a time schedule</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Keyboard Shortcuts Section -->
+        <section class=\\rd Shortcuts
+            </h2>
+            <div class=\shortcut\iv class=\s=\iv class=\shortcut\ss=\>
+                    <div class=\ortcut-desc\    
+        <!-- Workflow Pattern Section -->
+        <section class=\2 class=\      Workflow Pattern
+            </h2>
+            <div class=\    <p style=\mple</p>
+                <div class=\step\aterial-icons\step-name\                  </div>
+                    <div class=\s=\workflow-step\lass=\lass=\iv>
+                    </div>
+                    <div class=\<i class=\lass=\    <i class=\<div class=\</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Best Practices Section -->
+        <section class=\<h2 class=\            Best Practices
+            </h2>
+            <div class=\      <ul class=\          <i class=\>Use clear naming conventions for workflows and nodes</div>
+                    </li>
+                    <li class=\ine</i>
+                        <div class=\r robust workflows</div>
+                    </li>
+                    <li class=\>
+                        <i class=\ss=\                    <li class=\>dashboard_customize</i>
+                        <div class=\o smaller sub-workflows</div>
+                    </li>
+                    <li class=\tem\  <div class=\</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang=\\t</title>
+    <link href=\0&display=swap\rial+Icons\ing: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .poster-container {
+            width: 720px;
+            min-height: 960px;
+            background-color: #121212;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            background-color: #EA4B71;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-text {
+            color: white;
+            font-weight: 700;
+            font-size: 28px;
+        }
+        .title {
+            font-size: 60px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 24px;
+            color: #cccccc;
+        }
+        .section {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #ff6d5a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title .material-icons {
+            margin-right: 10px;
+        }
+        .nodes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .node-card {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #7c3aed;
+        }
+        .node-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .node-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .node-icon .material-icons {
+            color: #ff6d5a;
+            font-size: 28px;
+        }
+        .node-info h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .node-info p {
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .shortcuts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .shortcut {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 15px;
+            flex: 1;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-left: 4px solid #ff6d5a;
+        }
+        .shortcut-key {
+            background-color: #2a2a2a;
+            color: #ff6d5a;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .shortcut-desc {
+            font-size: 16px;
+            color: #cccccc;
+            text-align: center;
+        }
+        .workflow-pattern {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .workflow-steps {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .workflow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 30%;
+        }
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .step-icon .material-icons {
+            color: #7c3aed;
+            font-size: 30px;
+        }
+        .step-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .step-desc {
+            font-size: 14px;
+            color: #cccccc;
+        }
+        .arrow {
+            display: flex;
+            align-items: center;
+            color: #7c3aed;
+            font-size: 30px;
+        }
+        .best-practices {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 25px;
+        }
+        .practice-list {
+            list-style: none;
+        }
+        .practice-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .practice-item .material-icons {
+            color: #7c3aed;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .practice-text {
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .bg-accent {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 109, 90, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            z-index: 1;
+        }
+        .bg-accent-1 {
+            top: -100px;
+            right: -100px;
+        }
+        .bg-accent-2 {
+            bottom: -50px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class=\ent bg-accent-1\- Header Section -->
+        <header class=\      <span class=\1 class=\ide</p>
+            </div>
+        </header>
+        
+        <!-- Essential Nodes Section -->
+        <section class=\ass=\  <div class=\ass=\  </div>
+                    <div class=\3>
+                        <p>Connect to any API endpoint</p>
+                    </div>
+                </div>
+                <div class=
+\                  <div class=\          <p>Receive data from external services</p>
+                    </div>
+                </div>
+                <div class=\                  <i class=\    <div class=\fy or add data fields</p>
+                    </div>
+                </div>
+                <div class=\=\e-info\ow branches</p>
+                    </div>
+                </div>
+                <div class=\de-card\al-icons\                    <h3>Code</h3>
+                        <p>Execute custom JavaScript logic</p>
+                    </div>
+                </div>
+                <div class=\            <div class=\>
+                    </div>
+                    <div class=\  <h3>Schedule Trigger</h3>
+                        <p>Run workflows on a time schedule</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Keyboard Shortcuts Section -->
+        <section class=\\rd Shortcuts
+            </h2>
+            <div class=\shortcut\iv class=\s=\iv class=\shortcut\ss=\>
+                    <div class=\ortcut-desc\    
+        <!-- Workflow Pattern Section -->
+        <section class=\2 class=\      Workflow Pattern
+            </h2>
+            <div class=\    <p style=\mple</p>
+                <div class=\step\aterial-icons\step-name\                  </div>
+                    <div class=\s=\workflow-step\lass=\lass=\iv>
+                    </div>
+                    <div class=\<i class=\lass=\    <i class=\<div class=\</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Best Practices Section -->
+        <section class=\<h2 class=\            Best Practices
+            </h2>
+            <div class=\      <ul class=\          <i class=\>Use clear naming conventions for workflows and nodes</div>
+                    </li>
+                    <li class=\ine</i>
+                        <div class=\r robust workflows</div>
+                    </li>
+                    <li class=\>
+                        <i class=\ss=\                    <li class=\>dashboard_customize</i>
+                        <div class=\o smaller sub-workflows</div>
+                    </li>
+                    <li class=\tem\  <div class=\</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang=\\t</title>
+    <link href=\0&display=swap\rial+Icons\ing: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .poster-container {
+            width: 720px;
+            min-height: 960px;
+            background-color: #121212;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            background-color: #EA4B71;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-text {
+            color: white;
+            font-weight: 700;
+            font-size: 28px;
+        }
+        .title {
+            font-size: 60px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 24px;
+            color: #cccccc;
+        }
+        .section {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #ff6d5a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title .material-icons {
+            margin-right: 10px;
+        }
+        .nodes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .node-card {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #7c3aed;
+        }
+        .node-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .node-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .node-icon .material-icons {
+            color: #ff6d5a;
+            font-size: 28px;
+        }
+        .node-info h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .node-info p {
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .shortcuts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .shortcut {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 15px;
+            flex: 1;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-left: 4px solid #ff6d5a;
+        }
+        .shortcut-key {
+            background-color: #2a2a2a;
+            color: #ff6d5a;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .shortcut-desc {
+            font-size: 16px;
+            color: #cccccc;
+            text-align: center;
+        }
+        .workflow-pattern {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .workflow-steps {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .workflow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 30%;
+        }
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .step-icon .material-icons {
+            color: #7c3aed;
+            font-size: 30px;
+        }
+        .step-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .step-desc {
+            font-size: 14px;
+            color: #cccccc;
+        }
+        .arrow {
+            display: flex;
+            align-items: center;
+            color: #7c3aed;
+            font-size: 30px;
+        }
+        .best-practices {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 25px;
+        }
+        .practice-list {
+            list-style: none;
+        }
+        .practice-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .practice-item .material-icons {
+            color: #7c3aed;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .practice-text {
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .bg-accent {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 109, 90, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            z-index: 1;
+        }
+        .bg-accent-1 {
+            top: -100px;
+            right: -100px;
+        }
+        .bg-accent-2 {
+            bottom: -50px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class=\ent bg-accent-1\- Header Section -->
+        <header class=\      <span class=\1 class=\ide</p>
+            </div>
+        </header>
+        
+        <!-- Essential Nodes Section -->
+        <section class=\ass=\  <div class=\ass=\  </div>
+                    <div class=\3>
+                        <p>Connect to any API endpoint</p>
+                    </div>
+                </div>
+                <div class=
+\                  <div class=\          <p>Receive data from external services</p>
+                    </div>
+                </div>
+                <div class=\                  <i class=\    <div class=\fy or add data fields</p>
+                    </div>
+                </div>
+                <div class=\=\e-info\ow branches</p>
+                    </div>
+                </div>
+                <div class=\de-card\al-icons\                    <h3>Code</h3>
+                        <p>Execute custom JavaScript logic</p>
+                    </div>
+                </div>
+                <div class=\            <div class=\>
+                    </div>
+                    <div class=\  <h3>Schedule Trigger</h3>
+                        <p>Run workflows on a time schedule</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Keyboard Shortcuts Section -->
+        <section class=\\rd Shortcuts
+            </h2>
+            <div class=\shortcut\iv class=\s=\iv class=\shortcut\ss=\>
+                    <div class=\ortcut-desc\    
+        <!-- Workflow Pattern Section -->
+        <section class=\2 class=\      Workflow Pattern
+            </h2>
+            <div class=\    <p style=\mple</p>
+                <div class=\step\aterial-icons\step-name\                  </div>
+                    <div class=\s=\workflow-step\lass=\lass=\iv>
+                    </div>
+                    <div class=\<i class=\lass=\    <i class=\<div class=\</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Best Practices Section -->
+        <section class=\<h2 class=\            Best Practices
+            </h2>
+            <div class=\      <ul class=\          <i class=\>Use clear naming conventions for workflows and nodes</div>
+                    </li>
+                    <li class=\ine</i>
+                        <div class=\r robust workflows</div>
+                    </li>
+                    <li class=\>
+                        <i class=\ss=\                    <li class=\>dashboard_customize</i>
+                        <div class=\o smaller sub-workflows</div>
+                    </li>
+                    <li class=\tem\  <div class=\</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang=\\t</title>
+    <link href=\0&display=swap\rial+Icons\ing: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .poster-container {
+            width: 720px;
+            min-height: 960px;
+            background-color: #121212;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            background-color: #EA4B71;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-text {
+            color: white;
+            font-weight: 700;
+            font-size: 28px;
+        }
+        .title {
+            font-size: 60px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 24px;
+            color: #cccccc;
+        }
+        .section {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #ff6d5a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title .material-icons {
+            margin-right: 10px;
+        }
+        .nodes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .node-card {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #7c3aed;
+        }
+        .node-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .node-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .node-icon .material-icons {
+            color: #ff6d5a;
+            font-size: 28px;
+        }
+        .node-info h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .node-info p {
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .shortcuts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .shortcut {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 15px;
+            flex: 1;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-left: 4px solid #ff6d5a;
+        }
+        .shortcut-key {
+            background-color: #2a2a2a;
+            color: #ff6d5a;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .shortcut-desc {
+            font-size: 16px;
+            color: #cccccc;
+            text-align: center;
+        }
+        .workflow-pattern {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .workflow-steps {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .workflow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 30%;
+        }
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .step-icon .material-icons {
+            color: #7c3aed;
+            font-size: 30px;
+        }
+        .step-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .step-desc {
+            font-size: 14px;
+            color: #cccccc;
+        }
+        .arrow {
+            display: flex;
+            align-items: center;
+            color: #7c3aed;
+            font-size: 30px;
+        }
+        .best-practices {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 25px;
+        }
+        .practice-list {
+            list-style: none;
+        }
+        .practice-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .practice-item .material-icons {
+            color: #7c3aed;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .practice-text {
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .bg-accent {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 109, 90, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            z-index: 1;
+        }
+        .bg-accent-1 {
+            top: -100px;
+            right: -100px;
+        }
+        .bg-accent-2 {
+            bottom: -50px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class=\ent bg-accent-1\- Header Section -->
+        <header class=\      <span class=\1 class=\ide</p>
+            </div>
+        </header>
+        
+        <!-- Essential Nodes Section -->
+        <section class=\ass=\  <div class=\ass=\  </div>
+                    <div class=\3>
+                        <p>Connect to any API endpoint</p>
+                    </div>
+                </div>
+                <div class=
+\                  <div class=\          <p>Receive data from external services</p>
+                    </div>
+                </div>
+                <div class=\                  <i class=\    <div class=\fy or add data fields</p>
+                    </div>
+                </div>
+                <div class=\=\e-info\ow branches</p>
+                    </div>
+                </div>
+                <div class=\de-card\al-icons\                    <h3>Code</h3>
+                        <p>Execute custom JavaScript logic</p>
+                    </div>
+                </div>
+                <div class=\            <div class=\>
+                    </div>
+                    <div class=\  <h3>Schedule Trigger</h3>
+                        <p>Run workflows on a time schedule</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Keyboard Shortcuts Section -->
+        <section class=\\rd Shortcuts
+            </h2>
+            <div class=\shortcut\iv class=\s=\iv class=\shortcut\ss=\>
+                    <div class=\ortcut-desc\    
+        <!-- Workflow Pattern Section -->
+        <section class=\2 class=\      Workflow Pattern
+            </h2>
+            <div class=\    <p style=\mple</p>
+                <div class=\step\aterial-icons\step-name\                  </div>
+                    <div class=\s=\workflow-step\lass=\lass=\iv>
+                    </div>
+                    <div class=\<i class=\lass=\    <i class=\<div class=\</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Best Practices Section -->
+        <section class=\<h2 class=\            Best Practices
+            </h2>
+            <div class=\      <ul class=\          <i class=\>Use clear naming conventions for workflows and nodes</div>
+                    </li>
+                    <li class=\ine</i>
+                        <div class=\r robust workflows</div>
+                    </li>
+                    <li class=\>
+                        <i class=\ss=\                    <li class=\>dashboard_customize</i>
+                        <div class=\o smaller sub-workflows</div>
+                    </li>
+                    <li class=\tem\  <div class=\</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html><!DOCTYPE html>
+<html lang=\\t</title>
+    <link href=\0&display=swap\rial+Icons\ing: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .poster-container {
+            width: 720px;
+            min-height: 960px;
+            background-color: #121212;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            background-color: #EA4B71;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo-text {
+            color: white;
+            font-weight: 700;
+            font-size: 28px;
+        }
+        .title {
+            font-size: 60px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 24px;
+            color: #cccccc;
+        }
+        .section {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #ff6d5a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title .material-icons {
+            margin-right: 10px;
+        }
+        .nodes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .node-card {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #7c3aed;
+        }
+        .node-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .node-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .node-icon .material-icons {
+            color: #ff6d5a;
+            font-size: 28px;
+        }
+        .node-info h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .node-info p {
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .shortcuts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .shortcut {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 15px;
+            flex: 1;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-left: 4px solid #ff6d5a;
+        }
+        .shortcut-key {
+            background-color: #2a2a2a;
+            color: #ff6d5a;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .shortcut-desc {
+            font-size: 16px;
+            color: #cccccc;
+            text-align: center;
+        }
+        .workflow-pattern {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .workflow-steps {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .workflow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 30%;
+        }
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #2a2a2a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .step-icon .material-icons {
+            color: #7c3aed;
+            font-size: 30px;
+        }
+        .step-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: white;
+        }
+        .step-desc {
+            font-size: 14px;
+            color: #cccccc;
+        }
+        .arrow {
+            display: flex;
+            align-items: center;
+            color: #7c3aed;
+            font-size: 30px;
+        }
+        .best-practices {
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 25px;
+        }
+        .practice-list {
+            list-style: none;
+        }
+        .practice-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .practice-item .material-icons {
+            color: #7c3aed;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .practice-text {
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .bg-accent {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 109, 90, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            z-index: 1;
+        }
+        .bg-accent-1 {
+            top: -100px;
+            right: -100px;
+        }
+        .bg-accent-2 {
+            bottom: -50px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class=\ent bg-accent-1\- Header Section -->
+        <header class=\      <span class=\1 class=\ide</p>
+            </div>
+        </header>
+        
+        <!-- Essential Nodes Section -->
+        <section class=\ass=\  <div class=\ass=\  </div>
+                    <div class=\3>
+                        <p>Connect to any API endpoint</p>
+                    </div>
+                </div>
+                <div class=
+\                  <div class=\          <p>Receive data from external services</p>
+                    </div>
+                </div>
+                <div class=\                  <i class=\    <div class=\fy or add data fields</p>
+                    </div>
+                </div>
+                <div class=\=\e-info\ow branches</p>
+                    </div>
+                </div>
+                <div class=\de-card\al-icons\                    <h3>Code</h3>
+                        <p>Execute custom JavaScript logic</p>
+                    </div>
+                </div>
+                <div class=\            <div class=\>
+                    </div>
+                    <div class=\  <h3>Schedule Trigger</h3>
+                        <p>Run workflows on a time schedule</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Keyboard Shortcuts Section -->
+        <section class=\\rd Shortcuts
+            </h2>
+            <div class=\shortcut\iv class=\s=\iv class=\shortcut\ss=\>
+                    <div class=\ortcut-desc\    
+        <!-- Workflow Pattern Section -->
+        <section class=\2 class=\      Workflow Pattern
+            </h2>
+            <div class=\    <p style=\mple</p>
+                <div class=\step\aterial-icons\step-name\                  </div>
+                    <div class=\s=\workflow-step\lass=\lass=\iv>
+                    </div>
+                    <div class=\<i class=\lass=\    <i class=\<div class=\</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Best Practices Section -->
+        <section class=\<h2 class=\            Best Practices
+            </h2>
+            <div class=\      <ul class=\          <i class=\>Use clear naming conventions for workflows and nodes</div>
+                    </li>
+                    <li class=\ine</i>
+                        <div class=\r robust workflows</div>
+                    </li>
+                    <li class=\>
+                        <i class=\ss=\                    <li class=\>dashboard_customize</i>
+                        <div class=\o smaller sub-workflows</div>
+                    </li>
+                    <li class=\tem\  <div class=\</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

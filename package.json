@@ -1,24 +1,19 @@
 {
-  "name": "ai-automatisatie-west-vlaanderen",
+  "name": "ai-automatisatie-monorepo",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "react-helmet-async": "^2.0.5",
-    "react-router-dom": "^7.12.0"
-  },
-  "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "puppeteer": "^24.35.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "dev:ai": "pnpm --filter @app/ai-automatisatie dev",
+    "dev:n8n-auto": "pnpm --filter @app/n8n-automatisatie dev",
+    "dev:expert": "pnpm --filter @app/n8n-expert dev",
+    "build": "pnpm -r build",
+    "build:ai": "pnpm --filter @app/ai-automatisatie build",
+    "build:n8n-auto": "pnpm --filter @app/n8n-automatisatie build",
+    "build:expert": "pnpm --filter @app/n8n-expert build",
+    "preview:ai": "pnpm --filter @app/ai-automatisatie preview",
+    "preview:n8n-auto": "pnpm --filter @app/n8n-automatisatie preview",
+    "preview:expert": "pnpm --filter @app/n8n-expert preview",
+    "typecheck": "pnpm -r typecheck"
   }
 }

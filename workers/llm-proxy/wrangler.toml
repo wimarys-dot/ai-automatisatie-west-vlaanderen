@@ -4,7 +4,7 @@ compatibility_date = "2024-01-01"
 
 # Allowed origins for CORS (add your domains)
 [vars]
-ALLOWED_ORIGINS = "https://ai-automatisatie.be,https://ai-automatisatie.pages.dev,http://localhost:5173"
+ALLOWED_ORIGINS = "https://ai-automatisatie.be,https://ai-automatisatie.pages.dev,https://n8n-automatisatie.be,https://n8n-automatisatie.pages.dev,https://n8n-expert.be,https://n8n-expert.pages.dev,http://localhost:3000,http://localhost:3001,http://localhost:3002"
 
 # The API key will be added as a secret via:
 # wrangler secret put FEATHERLESS_API_KEY

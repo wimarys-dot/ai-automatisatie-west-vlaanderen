@@ -1,0 +1,44 @@
+# AI Automatisatie West-Vlaanderen
+
+> n8n expert en AI automatisering specialist voor KMO's in West-Vlaanderen. Wij helpen bedrijven workflows te automatiseren met n8n, AI agents en MCP integraties.
+
+AI Automatisatie is een West-Vlaamse specialist in workflow automatisering. Wij bouwen slimme automatiseringen die bedrijven uren per week besparen. Onze focus ligt op n8n implementaties, AI agents en het Model Context Protocol (MCP) voor veilige AI-data integraties.
+
+## Diensten
+
+- [n8n Expert](/n8n-expert): Gecertificeerde n8n implementatie en consulting voor bedrijven
+- [AI Agents](/ai-agents): Intelligente agents die zelfstandig taken uitvoeren en beslissingen nemen
+- [MCP Protocol](/mcp-protocol): Model Context Protocol voor veilige AI toegang tot bedrijfsdata
+
+## Kennisbank
+
+- [Wat is n8n?](/wat-is-n8n): Introductie tot het open-source workflow automatiseringsplatform
+- [n8n vs Zapier](/n8n-vs-zapier): Vergelijking tussen n8n en Zapier - welke past bij jou?
+- [n8n vs Make](/n8n-vs-make): Vergelijking tussen n8n en Make (Integromat)
+- [AI Automatisering](/ai-automatisering): Alles over kunstmatige intelligentie in bedrijfsautomatisering
+- [Workflow Automatisering](/workflow-automatisering): Gids voor het automatiseren van bedrijfsprocessen
+- [n8n MCP](/n8n-mcp): n8n integratie met Model Context Protocol
+- [n8n AI Agent](/n8n-ai-agent): AI agents bouwen met n8n
+
+## Sectoren
+
+- [Sectoren Overzicht](/sectoren): Automatisering per branche in West-Vlaanderen
+- [Accountants](/sector/accountants): Automatisering voor boekhoudkantoren en accountants
+- [Makelaars](/sector/makelaars): Workflow automatisering voor vastgoed en immobiliën
+- [Advocaten](/sector/advocaten): Juridische automatisering voor advocatenkantoren
+- [Retail](/sector/retail): E-commerce en retail automatisering
+- [Bouw](/sector/bouw): Automatisering voor bouwbedrijven en aannemers
+
+## Regio's
+
+- [Brugge](/brugge): AI automatisering voor bedrijven in Brugge
+- [Kortrijk](/kortrijk): n8n expert voor KMO's in Kortrijk
+- [Oostende](/oostende): Workflow automatisering aan de kust
+- [Roeselare](/roeselare): Onze thuisbasis - lokale automatisering expertise
+- [Ieper](/ieper): Automatisering in de Westhoek
+
+## Contact
+
+Gevestigd in Roeselare, West-Vlaanderen. Wij bedienen bedrijven in heel België met focus op West-Vlaanderen.
+
+Website: https://ai-automatisatie.be

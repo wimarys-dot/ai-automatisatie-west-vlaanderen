@@ -1,0 +1,11 @@
+{
+  "name": "@repo/config",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    "./tailwind-preset": "./src/tailwind-preset.ts",
+    "./vite-base": "./src/vite-base.ts"
+  }
+}

@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --color-brand: #ff6d5a;
+  --color-brand-hover: #ff8575;
+  --color-brand-muted: oklch(from #ff6d5a l c h / 0.1);
+  --color-accent: #7c3aed;
+  --color-accent-hover: #8b5cf6;
+  --color-accent-muted: oklch(from #7c3aed l c h / 0.1);
+
+  --color-surface-bg: #09090b;
+  --color-surface-card: #18181b;
+  --color-surface-border: oklch(from #ffffff l c h / 0.05);
+  --color-surface-border-hover: oklch(from #ff6d5a l c h / 0.3);
+
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
+  --color-text-inverted: #09090b;
+
+  --animate-fade-in: fadeIn 0.8s ease-out forwards;
+  --animate-flow: flow 4s linear infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flow {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* n8n.io Canvas Dot Grid */
+.bg-canvas {
+  background-image: radial-gradient(#27272a 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.glass {
+  background: rgba(18, 18, 23, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Workflow Connection Line Animation */
+.workflow-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, var(--color-brand), transparent);
+  height: 1px;
+  width: 100%;
+  opacity: 0.3;
+  animation: flow 4s linear infinite;
+}
+
+/* Node Sockets */
+.node-socket {
+  width: 8px;
+  height: 8px;
+  background: #3f3f46;
+  border: 1px solid #52525b;
+  border-radius: 50%;
+  position: absolute;
+}
+
+::selection {
+  background-color: var(--color-brand);
+  color: white;
+}

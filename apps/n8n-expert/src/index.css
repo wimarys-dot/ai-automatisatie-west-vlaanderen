@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --color-brand: #f59e0b;
+  --color-brand-hover: #fbbf24;
+  --color-brand-muted: oklch(from #f59e0b l c h / 0.1);
+  --color-accent: #8b5cf6;
+  --color-accent-hover: #a78bfa;
+  --color-accent-muted: oklch(from #8b5cf6 l c h / 0.1);
+
+  --color-surface-bg: #0c1222;
+  --color-surface-card: #131c31;
+  --color-surface-border: oklch(from #ffffff l c h / 0.08);
+  --color-surface-border-hover: oklch(from #f59e0b l c h / 0.3);
+
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+  --color-text-inverted: #0c1222;
+
+  --animate-fade-in: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-brand);
+  color: white;
+}

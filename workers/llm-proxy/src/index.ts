@@ -19,7 +19,11 @@ export default {
     // Check if origin matches allowed list or is a subdomain of pages.dev
     const isAllowed = allowedOrigins.some(allowed => origin === allowed) ||
       origin.endsWith('.ai-automatisatie.pages.dev') ||
-      origin === 'https://ai-automatisatie.pages.dev';
+      origin === 'https://ai-automatisatie.pages.dev' ||
+      origin.endsWith('.n8n-automatisatie.pages.dev') ||
+      origin === 'https://n8n-automatisatie.pages.dev' ||
+      origin.endsWith('.n8n-expert.pages.dev') ||
+      origin === 'https://n8n-expert.pages.dev';
 
     if (!isAllowed) {
       return new Response('Forbidden', { status: 403 });

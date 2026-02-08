@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang=\\s</title>
+    <link href=\et\=swap\  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .poster-container {
+            width: 720px;
+            min-height: 960px;
+            margin: 0 auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .header h2 {
+            font-size: 24px;
+            font-weight: 400;
+            color: #cccccc;
+        }
+        .header-image {
+            width: 100%;
+            height: 180px;
+            margin: 20px 0;
+            background-image: url('https://mfile.z.ai/1768446944025-9c738f391d0d4ddc8020a563aaef7f95.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+        .section {
+            margin-bottom: 40px;
+            background-color: rgba(30, 30, 30, 0.7);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #ff6d5a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .section-title .material-icons {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        .time-savings-table {
+            width: 100%;
+        }
+        .time-savings-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: rgba(40, 40, 40, 0.7);
+            border-radius: 8px;
+        }
+        .time-savings-row:last-child {
+            margin-bottom: 0;
+        }
+        .task-name {
+            flex: 0 0 40%;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .time-comparison {
+            flex: 0 0 35%;
+            display: flex;
+            align-items: center;
+        }
+        .time-before, .time-after {
+            text-align: center;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .time-before {
+            background-color: rgba(255, 109, 90, 0.2);
+            color: #ff6d5a;
+            margin-right: 10px;
+        }
+        .time-after {
+            background-color: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+        .arrow {
+            margin: 0 10px;
+            color: #cccccc;
+        }
+        .savings-percentage {
+            flex: 0 0 25%;
+            text-align: right;
+            font-size: 20px;
+            font-weight: 700;
+            color: #ff6d5a;
+        }
+        .roi-calculation {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .roi-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: rgba(40, 40, 40, 0.7);
+            border-radius: 8px;
+        }
+        .roi-icon {
+            flex: 0 0 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 109, 90, 0.2);
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .roi-icon .material-icons {
+            font-size: 30px;
+            color: #ff6d5a;
+        }
+        .roi-text {
+            flex: 1;
+            font-size: 18px;
+        }
+        .roi-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: #ff6d5a;
+        }
+        .roi-chart-container {
+            height: 200px;
+            margin-top: 20px;
+        }
+        .cta-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background-color: #ff6d5a;
+            color: white;
+            font-size: 24px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 109, 90, 0.3);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 109, 90, 0.4);
+        }
+        .cta-note {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .highlight {
+            color: #ff6d5a;
+            font-weight: 500;
+        }
+        .background-accent {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 109, 90, 0.1) 0%, rgba(255, 109, 90, 0) 70%);
+            z-index: -1;
+        }
+        .accent-1 {
+            top: -100px;
+            right: -100px;
+        }
+        .accent-2 {
+            bottom: -50px;
+            left: -150px;
+        }
+    </style>
+</head>
+<body>
+    <div class=
+d-accent accent-1\    <!-- Header Section -->
+        <div class=\ Accountants</h1>
+            <h2>Bespaar tijd en verhoog uw winstgevendheid</h2>
+            <div class=\    <div class=\aterial-icons\  <div class=\        <div class=\parison\<div class=\            </div>
+                    <div class=\          </div>
+                <div class=\task-name\              <div class=\</div>
+                        <div class=\                    <div class=\              <div class=\conciliatie</div>
+                    <div class=\ class=\              <div class=\  <div class=\v class=\
+                    <div class=\ore\<div class=\ass=\\            <div class=\r</div>
+                        <div class=\time-after
+tage\      <!-- ROI Calculation Section -->
+        <div class=\ction-title
+ Investment
+            </div>
+            <div class=\lass=\material-icons\ext\            <div class=\lass=\material-icons\i-text\    <div class=\i-item\-icons\                Eenmalige investering
+                    </div>
+                    <div class=\roi-value\                  <div class=\_chart</i>
+                    </div>
+                    <div class=\          ROI in het eerste jaar
+                    </div>
+                    <div class=\alue\ontainer\        
+        <!-- Call to Action Section -->
+        <div class=\<a href=\em vandaag nog contact op voor een vrijblijvende demo</p>
+        </div>
+    </div>
+
+    <script>
+        // ROI Chart
+        const ctx = document.getElementById('roiChart').getContext('2d');
+        const roiChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Investering', 'Jaar 1 Return', 'Jaar 2 Return'],
+                datasets: [{
+                    label: 'Bedrag (€)',
+                    data: [10000, 28000, 56000],
+                    backgroundColor: [
+                        'rgba(255, 109, 90, 0.7)',
+                        'rgba(76, 175, 80, 0.7)',
+                        'rgba(76, 175, 80, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 109, 90, 1)',
+                        'rgba(76, 175, 80, 1)',
+                        'rgba(76, 175, 80, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return '€' + context.raw.toLocaleString('nl-NL');
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '€' + value.toLocaleString('nl-NL');
+                            },
+                            color: '#cccccc'
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#cccccc'
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
