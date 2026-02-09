@@ -39,21 +39,21 @@ const ManagedHostingPage: React.FC = () => {
           name="description"
           content="n8n managed hosting op Europese servers. Professionele n8n hosting met support, workflow beheer, auto-updates en dagelijkse backups. Self-hosted kracht met cloud gemak. Managed n8n services vanaf €49/maand."
         />
-        <link rel="canonical" href="https://n8n-automatisatie.be/managed-hosting" />
+        <link rel="canonical" href="https://n8n-automatisatie.be/diensten/managed-hosting" />
       </Helmet>
 
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://n8n-automatisatie.be' },
           { name: 'Diensten', url: 'https://n8n-automatisatie.be/diensten' },
-          { name: 'Managed Hosting', url: 'https://n8n-automatisatie.be/managed-hosting' },
+          { name: 'Managed Hosting', url: 'https://n8n-automatisatie.be/diensten/managed-hosting' },
         ]}
       />
 
       <ServiceSchema
         name="n8n Managed Hosting"
         description="Professionele n8n managed hosting op Europese servers. Inclusief dagelijkse backups, auto-updates, monitoring en support. GDPR-compliant hosting voor Belgische bedrijven."
-        url="https://n8n-automatisatie.be/managed-hosting"
+        url="https://n8n-automatisatie.be/diensten/managed-hosting"
         provider="n8n-automatisatie.be"
         areaServed={['België', 'Nederland', 'West-Vlaanderen', 'Oost-Vlaanderen', 'Vlaams-Brabant']}
         priceRange="€49 - €199/maand"
