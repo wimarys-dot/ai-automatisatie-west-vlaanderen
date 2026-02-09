@@ -83,6 +83,13 @@ const footerConfig: FooterConfig = {
         { label: 'Ieper', path: '/ieper' },
       ],
     },
+    {
+      title: 'Netwerk',
+      links: [
+        { label: 'n8n-automatisatie.be', path: 'https://n8n-automatisatie.be' },
+        { label: 'n8n-expert.be', path: 'https://n8n-expert.be' },
+      ],
+    },
   ],
   tagline: 'Geen woorden, maar daden.',
   copyright: '\u00A9 2026 AI-AUTOMATISATIE.BE. West-Vlaamse Slagkracht.',

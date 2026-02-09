@@ -3,25 +3,25 @@ import { Link } from 'react-router-dom';
 
 const articles = [
   {
-    title: 'n8n Best Practices: 10 regels voor schaalbare workflows',
-    category: 'Best Practices',
+    title: 'n8n Tutorial Nederlands: De Complete Gids van Beginner tot Expert',
+    category: 'Tutorial',
     date: '15 jan 2026',
-    excerpt: 'De belangrijkste principes voor het bouwen van onderhoudbare en schaalbare n8n workflows.',
+    excerpt: 'Leer n8n stap voor stap: van installatie tot geavanceerde AI workflows. De meest complete Nederlandstalige n8n gids.',
+    slug: '/kennisbank/n8n-tutorial',
+  },
+  {
+    title: 'n8n Best Practices: 10 Regels voor Schaalbare Workflows',
+    category: 'Best Practices',
+    date: '10 jan 2026',
+    excerpt: 'De belangrijkste principes voor het bouwen van onderhoudbare, veilige en schaalbare n8n workflows in productie.',
     slug: '/kennisbank/best-practices',
   },
   {
-    title: 'n8n vs Zapier vs Make: De ultieme vergelijking 2026',
-    category: 'Vergelijkingen',
-    date: '10 jan 2026',
-    excerpt: 'Een objectieve vergelijking op prijs, features, schaalbaarheid en self-hosting mogelijkheden.',
-    slug: '/kennisbank/vergelijking',
-  },
-  {
-    title: 'AI Agents bouwen met n8n: een praktische gids',
-    category: 'Tutorials',
+    title: '10 Praktische n8n Workflow Voorbeelden voor uw Bedrijf',
+    category: 'Voorbeelden',
     date: '5 jan 2026',
-    excerpt: 'Stap voor stap een intelligente AI agent bouwen die uw bedrijfsprocessen automatiseert.',
-    slug: '/kennisbank/ai-agents-tutorial',
+    excerpt: 'Van CRM automatisering tot AI-powered email classificatie: ontdek wat n8n voor uw bedrijf kan automatiseren.',
+    slug: '/kennisbank/workflow-voorbeelden',
   },
 ];
 
@@ -34,7 +34,7 @@ const BlogPreview: React.FC = () => {
             <h2 className="text-4xl font-bold text-text-primary mb-4">
               Uit de <span className="text-brand">Kennisbank</span>
             </h2>
-            <p className="text-text-secondary text-lg">Tutorials, best practices en actuele inzichten.</p>
+            <p className="text-text-secondary text-lg">Tutorials, best practices en praktische n8n workflow voorbeelden.</p>
           </div>
           <Link to="/kennisbank" className="hidden md:inline-flex items-center gap-2 text-brand font-bold hover:underline">
             Alle artikelen
@@ -52,7 +52,7 @@ const BlogPreview: React.FC = () => {
               className="group bg-surface-bg border border-surface-border rounded-2xl overflow-hidden hover:border-surface-border-hover transition-all"
             >
               <div className="h-48 bg-gradient-to-br from-brand/10 to-accent/10 flex items-center justify-center">
-                <span className="text-6xl opacity-20">📝</span>
+                <span className="text-6xl opacity-20">{i === 0 ? '🎓' : i === 1 ? '⚡' : '🔧'}</span>
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-3">
@@ -64,6 +64,13 @@ const BlogPreview: React.FC = () => {
               </div>
             </Link>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-text-muted mb-4">Wilt u persoonlijk advies over uw n8n setup?</p>
+          <Link to="/consultancy" className="text-brand font-bold hover:underline">
+            Plan een consultatie →
+          </Link>
         </div>
       </div>
     </section>
