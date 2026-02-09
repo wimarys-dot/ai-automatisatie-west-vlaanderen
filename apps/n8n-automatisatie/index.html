@@ -21,14 +21,73 @@
       "@type": "Organization",
       "@id": "https://n8n-automatisatie.be/#organization",
       "name": "n8n Automatisatie",
-      "description": "n8n automatisering specialist voor Belgische bedrijven. Implementatie, workflow design en managed hosting.",
+      "alternateName": "n8n-automatisatie.be",
+      "description": "n8n automatisering specialist voor Belgische bedrijven. Implementatie, workflow design, managed hosting en Zapier migratie.",
       "url": "https://n8n-automatisatie.be",
-      "areaServed": { "@type": "Country", "name": "België" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Roeselare",
+        "addressRegion": "West-Vlaanderen",
+        "addressCountry": "BE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "50.9469",
+        "longitude": "3.1267"
+      },
+      "areaServed": [
+        {"@type": "Country", "name": "België"},
+        {"@type": "Country", "name": "Nederland"}
+      ],
+      "parentOrganization": {
+        "@type": "Organization",
+        "@id": "https://ai-automatisatie.be/#organization",
+        "name": "AI Automatisatie West-Vlaanderen",
+        "url": "https://ai-automatisatie.be"
+      },
+      "knowsAbout": [
+        {"@type": "Thing", "name": "n8n", "description": "Open-source workflow automation platform", "sameAs": "https://n8n.io"},
+        {"@type": "Thing", "name": "Workflow Automation", "sameAs": "https://en.wikipedia.org/wiki/Workflow_automation"},
+        {"@type": "Thing", "name": "API Integration"},
+        {"@type": "Thing", "name": "Zapier", "sameAs": "https://zapier.com"},
+        {"@type": "Thing", "name": "Docker", "sameAs": "https://en.wikipedia.org/wiki/Docker_(software)"},
+        {"@type": "Thing", "name": "Managed Hosting"},
+        {"@type": "Thing", "name": "Business Process Automation", "sameAs": "https://en.wikipedia.org/wiki/Business_process_automation"}
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "n8n Implementatie", "url": "https://n8n-automatisatie.be/diensten"}
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "n8n Managed Hosting", "url": "https://n8n-automatisatie.be/diensten/managed-hosting"}
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {"@type": "Service", "name": "Zapier naar n8n Migratie", "url": "https://n8n-automatisatie.be/migratie-zapier"}
+        }
+      ],
       "sameAs": [
         "https://ai-automatisatie.be",
         "https://n8n-expert.be"
       ],
       "priceRange": "€€"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://n8n-automatisatie.be/#website",
+      "name": "n8n Automatisatie",
+      "url": "https://n8n-automatisatie.be",
+      "description": "n8n automatisering specialist voor Belgische bedrijven",
+      "inLanguage": "nl-BE",
+      "publisher": {
+        "@id": "https://n8n-automatisatie.be/#organization"
+      }
     }
     </script>
 

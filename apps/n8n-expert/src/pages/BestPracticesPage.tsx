@@ -112,6 +112,15 @@ const BestPracticesPage: React.FC = () => {
         datePublished="2026-01-10"
         dateModified="2026-02-01"
         author="n8n-expert.be"
+        about={[
+          { name: 'n8n', sameAs: 'https://n8n.io' },
+          { name: 'Workflow Automation', sameAs: 'https://en.wikipedia.org/wiki/Workflow_automation' },
+          { name: 'Software Engineering Best Practices' },
+        ]}
+        mentions={[
+          { name: 'Version Control', sameAs: 'https://en.wikipedia.org/wiki/Version_control' },
+          { name: 'Error Handling' },
+        ]}
       />
 
       <FAQSchema faqs={faqs} />

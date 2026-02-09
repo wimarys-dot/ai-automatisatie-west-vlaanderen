@@ -135,6 +135,16 @@ const N8nTutorialPage: React.FC = () => {
         datePublished="2026-01-15"
         dateModified="2026-02-01"
         author="n8n-expert.be"
+        about={[
+          { name: 'n8n', sameAs: 'https://n8n.io' },
+          { name: 'Workflow Automation', sameAs: 'https://en.wikipedia.org/wiki/Workflow_automation' },
+          { name: 'Docker', sameAs: 'https://en.wikipedia.org/wiki/Docker_(software)' },
+        ]}
+        mentions={[
+          { name: 'OpenAI', sameAs: 'https://en.wikipedia.org/wiki/OpenAI' },
+          { name: 'Zapier', sameAs: 'https://zapier.com' },
+          { name: 'JavaScript', sameAs: 'https://en.wikipedia.org/wiki/JavaScript' },
+        ]}
       />
 
       <FAQSchema faqs={faqs} />

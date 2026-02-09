@@ -158,6 +158,8 @@ interface ArticleSchemaProps {
   datePublished?: string;
   dateModified?: string;
   author?: string;
+  about?: Array<{ name: string; sameAs?: string }>;
+  mentions?: Array<{ name: string; sameAs?: string }>;
 }
 
 export const ArticleSchema: React.FC<ArticleSchemaProps> = ({
@@ -166,9 +168,12 @@ export const ArticleSchema: React.FC<ArticleSchemaProps> = ({
   url,
   datePublished = "2024-01-01",
   dateModified = "2025-02-01",
-  author = "AI Automatisatie"
+  author = "AI Automatisatie",
+  about,
+  mentions
 }) => {
-  const schema = {
+  const baseUrl = url.split('/').slice(0, 3).join('/');
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": `${url}#article`,
@@ -182,15 +187,34 @@ export const ArticleSchema: React.FC<ArticleSchemaProps> = ({
     "dateModified": dateModified,
     "author": {
       "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
       "name": author,
-      "url": url.split('/').slice(0, 3).join('/')
+      "url": baseUrl
     },
     "publisher": {
       "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
       "name": author,
-      "url": url.split('/').slice(0, 3).join('/')
-    }
+      "url": baseUrl
+    },
+    "inLanguage": "nl-BE"
   };
+
+  if (about && about.length > 0) {
+    schema.about = about.map(item => {
+      const thing: Record<string, string> = { "@type": "Thing", "name": item.name };
+      if (item.sameAs) thing.sameAs = item.sameAs;
+      return thing;
+    });
+  }
+
+  if (mentions && mentions.length > 0) {
+    schema.mentions = mentions.map(item => {
+      const thing: Record<string, string> = { "@type": "Thing", "name": item.name };
+      if (item.sameAs) thing.sameAs = item.sameAs;
+      return thing;
+    });
+  }
 
   return (
     <Helmet>

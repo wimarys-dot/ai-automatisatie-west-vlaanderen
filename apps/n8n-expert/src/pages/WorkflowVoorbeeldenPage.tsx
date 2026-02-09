@@ -155,6 +155,18 @@ const WorkflowVoorbeeldenPage: React.FC = () => {
         datePublished="2026-01-05"
         dateModified="2026-02-01"
         author="n8n-expert.be"
+        about={[
+          { name: 'n8n', sameAs: 'https://n8n.io' },
+          { name: 'Workflow Automation', sameAs: 'https://en.wikipedia.org/wiki/Workflow_automation' },
+          { name: 'Business Process Automation', sameAs: 'https://en.wikipedia.org/wiki/Business_process_automation' },
+        ]}
+        mentions={[
+          { name: 'HubSpot', sameAs: 'https://en.wikipedia.org/wiki/HubSpot' },
+          { name: 'Shopify', sameAs: 'https://en.wikipedia.org/wiki/Shopify' },
+          { name: 'OpenAI', sameAs: 'https://en.wikipedia.org/wiki/OpenAI' },
+          { name: 'Slack', sameAs: 'https://en.wikipedia.org/wiki/Slack_(software)' },
+          { name: 'Google Sheets' },
+        ]}
       />
 
       <FAQSchema faqs={faqs} />
